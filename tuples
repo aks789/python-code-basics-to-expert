@@ -1,0 +1,10 @@
+# Tuples are immutable
+coordinates = (4, 5)
+coordinates1 = [4, 5]
+print(coordinates[0])
+
+# Incorrect
+#coordinates[1]=10
+coordinates1[1]=10
+
+# Diff between lists and tuples is that lists are mutable and tuples are immutable

@@ -1,0 +1,96 @@
+def sayhi(name,age):
+    print("Hello " + name + " your age is " + str(age))
+
+def add_functions(num1,num2):
+    return num1+num2
+
+print(add_functions(1,2))
+
+def say_hello(name='Akshay'):
+    print(f'Hello {name}')
+
+say_hello('Akriti')
+say_hello()
+
+## Return true if any number is even inside a list
+
+my_list = [1,2,3]
+
+def check_even_list(my_list):
+    even_numbers = []
+    for num in my_list:
+        if num % 2 == 0:
+            even_numbers.append(num)
+        else:
+            pass
+    return even_numbers
+
+print(check_even_list([4,2,7]))
+
+stock_prices = [('APP',200),('GOOG',400),('MSFT',100)]
+
+for item in stock_prices:
+    print(item)
+
+for ticker,price in stock_prices:
+    print(ticker)
+
+work_hours =[('Abby',100),('Billy',400),('Cassie',800)]
+
+def employee_check(work_hours):
+    current_max=0
+    employee_of_month=''
+
+    for emp,hours in work_hours:
+        if(hours>current_max):
+            current_max=hours;
+            employee_of_month=emp;
+        else:
+            pass
+
+    return (employee_of_month,current_max)
+
+name,hours = employee_check(work_hours)
+
+print(name)
+print(hours)
+
+example = [1,2,3,4,5,6,7]
+
+from random import shuffle
+
+shuffle(example)
+
+print(example)
+
+def myfunc(a,b,c=0):
+    return sum(a,b,c) * 0.05
+
+def myfunc1(*args):
+    print(sum(args))
+
+myfunc1(1,2,3)
+
+def myfunc2(**kwargs):
+    if 'fruit' in kwargs:
+        print('My fruit of choice is {}'.format(kwargs['fruit']))
+    else:
+        print('I did not find any fruit here')
+
+myfunc2(fruit='apple',veggie='lettuce')
+
+def myfunc3(*args,**kwargs):
+    print('I would like {} {}'.format(args[0],kwargs['food']))
+
+myfunc3(10,20,30,fruit='orange',food='eggs',animal='dog')
+
+
+def makes_twenty(n1,n2):
+    if sum(n1,n2) == 20:
+        return True
+    elif n1==20 or n2==20:
+        return True
+    else:
+        return False
+
+makes_twenty(20,10)
